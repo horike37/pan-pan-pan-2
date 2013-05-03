@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.flexslider ul {
+	list-style:none;
+}
+
+.flexslider ul li {
+	margin: 0;
+}
+
+
