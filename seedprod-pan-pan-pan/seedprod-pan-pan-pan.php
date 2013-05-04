@@ -131,7 +131,7 @@ function sppanpanpan_get_slide_post( $limit = -1 ) {
 	    	$attachment_id = get_post_thumbnail_id( $post->ID );				
 	    	$image_attributes = wp_get_attachment_image_src( $attachment_id, 'full' );
 	    	$ret .= 'image:"'.$image_attributes[0].'",';
-	    	$ret .= 'title:"'.get_the_title( $post->ID ).'",';
+	    	$ret .= 'title:"'.esc_js( get_the_title( $post->ID ) ).'",';
 	    	$image_attributes = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
 	    	$ret .= 'thumb:"'.$image_attributes[0].'"';
 	    	if ( get_post_meta( $post->ID, '_slide_link', true ) !== '' )
